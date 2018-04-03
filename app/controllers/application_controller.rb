@@ -12,8 +12,8 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  post '/recipes' do
-    @recipes = Recipe.all
+  post '/recipes/new' do
+    @recipe = Recipe.create(name: params[:name], ingredients: params[:ingredients], cook_time[:cook_time])
     erb :index
   end
 
