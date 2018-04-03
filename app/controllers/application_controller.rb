@@ -13,6 +13,5 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  post
 
 end
