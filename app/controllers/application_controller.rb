@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/recipes/new' do
-    binding.pry
+      @recipe = Recipe.create(:name => params[:name], :ingredients => params[:ingredients], :cook_time => params[:cook_time])
   end
 
   get '/recipes/:id' do
