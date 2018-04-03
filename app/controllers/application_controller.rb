@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/recipes' do
+    binding.pry
     erb  :index
   end
 
