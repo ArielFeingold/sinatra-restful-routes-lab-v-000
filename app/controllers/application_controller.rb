@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
     # binding.pry
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.delete
-    '/recipes/new'
+    redirect '/recipes/new'
   end
 
   get '/recipes/:id/edit' do  #load edit form
@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
     @recipe.cook_time = params[:cook_time]
     @recipe.save
     binding.pry
-    redirect to "/recipes/#{@recipe.id}"
+    redirect "/recipes/#{@recipe.id}"
   end
 
 end
