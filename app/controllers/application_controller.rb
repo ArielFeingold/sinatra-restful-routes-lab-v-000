@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
     # binding.pry
     @recipe = Recipe.find_by_id(params[:id])
     @recipe.delete
-    redirect '/recipes/new'
+    redirect '/recipes'
   end
 
   get '/recipes/:id/edit' do  #load edit form
