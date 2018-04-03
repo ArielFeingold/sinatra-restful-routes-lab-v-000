@@ -1,4 +1,4 @@
-use Rack::MethodOverride
+
 
 class ApplicationController < Sinatra::Base
   configure do
